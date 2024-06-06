@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_registration_report_wizard" model="ir.ui.view">
+        <field name="name">registration.report.wizard.form</field>
+        <field name="model">registration.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Print report">
+<!--                here mention a time frame within which you want to find registerations-->
+                <group>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </group>
+                <footer>
+                    <button string="Print" type="object" name="print_report" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

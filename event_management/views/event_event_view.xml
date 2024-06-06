@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--  heres tree view for event model -->
+    <record id="view_event_event_tree" model="ir.ui.view">
+        <field name="name">event.event.tree</field>
+        <field name="model">event.event</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="organizer_id"/>
+            </tree>
+        </field>
+    </record>
+<!--  heres form view for event model -->
+    <record id="view_event_event_form" model="ir.ui.view">
+        <field name="name">event.event.form</field>
+        <field name="model">event.event</field>
+        <field name="arch" type="xml">
+            <form>
+
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+<!--                        here i have added smart button which shows attendee count-->
+                        <button class="oe_stat_button" type="object" name="action_view_attendees" icon="fa-user">
+                            <div class="oe_stat_info">
+                                <field string=" Attendees" name="attendee_count" widget="statinfo" class="oe_stat_value"/>
+                            </div>
+                        </button>
+                    </div>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="organizer_id"/>
+                        <field name="attendee_ids"/>
+                        <field name="duration"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

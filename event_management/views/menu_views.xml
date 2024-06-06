@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!--    here i have added action for event model-->
+    <record id="action_event_event" model="ir.actions.act_window">
+        <field name="name">Events</field>
+        <field name="res_model">event.event</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+<!--    here i have added action for attendee model-->
+    <record id="action_event_attendee" model="ir.actions.act_window">
+        <field name="name">Attendees</field>
+        <field name="res_model">event.attendee</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+<!--    here i have added action for organiser model-->
+    <record id="action_event_organizer" model="ir.actions.act_window">
+        <field name="name">Organizers</field>
+        <field name="res_model">event.organizer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+<!--    here i have added action for registeration model-->
+    <record id="action_event_registration" model="ir.actions.act_window">
+        <field name="name">Registrations</field>
+        <field name="res_model">event.registration</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+<!--    here i have added action for wizard model-->
+    <record id="action_registration_report_wizard" model="ir.actions.act_window">
+        <field name="name">Registration Report</field>
+        <field name="res_model">registration.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+
+
+<!--Main event management menu-->
+    <menuitem id="menu_event_management" name="Event Management"/>
+
+<!--sub menu of Registration Report -->
+    <menuitem id="menu_registration_report" name="Registration Report" parent="menu_event_management" groups="group_event_manager"/>
+
+<!--  menu item for wizard   <-->
+    <menuitem id="menu_registration_report_wizard" name="Registration Report Wizard" parent="menu_registration_report" action="action_registration_report_wizard" groups="group_event_manager"/>
+
+<!--sub menu of Events -->
+    <menuitem id="menu_event_event" name="Events" parent="menu_event_management" action="action_event_event"/>
+
+    <!--sub menu of Attendees -->
+    <menuitem id="menu_event_attendee" name="Attendees" parent="menu_event_management" action="action_event_attendee"/>
+
+    <!--sub menu of Organizers -->
+    <menuitem id="menu_event_organizer" name="Organizers" parent="menu_event_management" action="action_event_organizer"/>
+
+    <!--sub menu of Registrations -->
+    <menuitem id="menu_event_registration" name="Registrations" parent="menu_event_management" action="action_event_registration"/>
+
+
+</odoo>

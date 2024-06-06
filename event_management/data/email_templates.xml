@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="email_template_registration_state" model="mail.template">
+        <field name="name">Registration State Notification</field>
+        <field name="model_id" ref="model_event_registration"/>
+        <field name="subject">Registration State Changed</field>
+        <field name="email_to">${object.attendee_id.email}</field>
+        <field name="email_cc">${object.event_id.organizer_id.email}</field>
+        <field name="body_html">
+            <![CDATA[
+                <p>Dear ${object.attendee_id.name},</p>
+                <p>Your registration for the event ${object.event_id.name} has been ${object.state}.</p>
+                <p>Thank you.</p>
+            ]]>
+        </field>
+    </record>
+</odoo>

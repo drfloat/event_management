@@ -1,0 +1,19 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_event_event_manager,event.event manager,model_event_event,group_event_manager,1,1,1,1
+access_event_event_organizer,event.event organizer,model_event_event,group_event_organizer,1,1,0,0
+access_event_event_attendee,event.event attendee,model_event_event,group_event_attendee,1,0,0,0
+
+access_event_attendee_manager,event.attendee manager,model_event_attendee,group_event_manager,1,1,1,1
+access_event_organizer_manager,event.organizer manager,model_event_organizer,group_event_manager,1,1,1,1
+access_event_registration_manager,event.registration manager,model_event_registration,group_event_manager,1,1,1,1
+
+access_event_attendee_organizer,event.attendee organizer,model_event_attendee,group_event_organizer,1,0,0,0
+access_event_organizer_organizer,event.organizer organizer,model_event_organizer,group_event_organizer,1,0,0,0
+access_event_registration_organizer,event.registration organizer,model_event_registration,group_event_organizer,1,1,0,0
+
+access_event_attendee_attendee,event.attendee attendee,model_event_attendee,group_event_attendee,1,0,0,0
+access_event_organizer_attendee,event.organizer attendee,model_event_organizer,group_event_attendee,1,0,0,0
+access_event_registration_attendee,event.registration attendee,model_event_registration,group_event_attendee,1,0,0,0
+
+access_registration_report_wizard_manager,registration.report.wizard manager,model_registration_report_wizard,group_event_manager,1,1,1,1
+

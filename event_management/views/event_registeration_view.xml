@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--  heres tree view for registeration model -->
+    <record id="view_event_registration_tree" model="ir.ui.view">
+        <field name="name">event.registration.tree</field>
+        <field name="model">event.registration</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="attendee_id"/>
+                <field name="event_id"/>
+                <field name="registration_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--  heres form view for registeration model -->
+
+    <record id="view_event_registration_form" model="ir.ui.view">
+        <field name="name">event.registration.form</field>
+        <field name="model">event.registration</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm" string="Confirm" type="object" class="oe_highlight"/>
+                    <button name="action_cancel" string="Cancel" type="object" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="attendee_id"/>
+                        <field name="event_id"/>
+                        <field name="registration_date"/>
+                        <field name="state"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+
+</odoo>
